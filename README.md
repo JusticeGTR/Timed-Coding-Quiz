@@ -25,7 +25,7 @@ The final page:
 https://justicegtr.github.io/Timed-Coding-Quiz/.
 
 ## Visuals
-![Portfolio webpage]()
+![Portfolio webpage](https://github.com/JusticeGTR/Timed-Coding-Quiz/blob/main/assets/images/Screenshot%20(83).png)
 
 ## Usage
 
