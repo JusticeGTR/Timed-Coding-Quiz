@@ -29,4 +29,5 @@ main {
     background-color:rgb(105, 14, 105);
     border-radius:15px;
     font-size:larger;
+    visibility:visible;
 }
