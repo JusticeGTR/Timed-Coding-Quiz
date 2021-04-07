@@ -31,22 +31,24 @@ var userInputEl = document.getElementById("userInput")
 var quizTitleEl = document.getElementById("quizTitle")
 var userScoreEl = document.getElementById("userScore")
 
-var problems = {
-    questionOne:{question:"Which of these are data types present in javascript?", answer1:"String, Number, Boolean, Object", answer2:"Lions, Tigers and Bears", answer3:"String, Cheddar, Mozzarella, Brie", answer4:"Jquery, Event, Debug, Terminal"},
-    questionTwo:{question:"What is the difference between '==' and '==='?", answer1:"Kinda equals and Really equals", answer2:"Loosely and Strictly equals", answer3:"Double equals and Triple equals", answer4:"'and' and 'or'"},
-    questionThree:{question:"If I want a variable available to everything, which scope should it be in?", answer1:"Sniper", answer2:"local", answer3:"Tele-", answer4:"Global"},
-    questionFour:{question:"If the keyword 'this' is used, what is it usually referring to?", answer1:"The sentence it's in", answer2:"A variable", answer3:"The function its in", answer4:"A for loop"},
-    questionFive:{question:"What is used to put a comment in Javascript?", answer1:"<!-- -->", answer2:"/* */", answer3:"//", answer4:"||"}
+var problems = [
+    questionOne:{question:"Which of these are data types present in javascript?", answer1:"String, Number, Boolean, Object", answer2:"Lions, Tigers and Bears", answer3:"String, Cheddar, Mozzarella, Brie", answer4:"Jquery, Event, Debug, Terminal", correctAnswer:"String, Number, Boolean, Object"},
+    questionTwo:{question:"What is the difference between '==' and '==='?", answer1:"Kinda equals and Really equals", answer2:"Loosely and Strictly equals", answer3:"Double equals and Triple equals", answer4:"'and' and 'or'", correctAnswer:"Loosely and Strictly equals"},
+    questionThree:{question:"If I want a variable available to everything, which scope should it be in?", answer1:"Sniper", answer2:"local", answer3:"Tele-", answer4:"Global", correctAnswer:"Global"},
+    questionFour:{question:"If the keyword 'this' is used, what is it usually referring to?", answer1:"The sentence it's in", answer2:"A variable", answer3:"The function its in", answer4:"A for loop", correctAnswer:"The function its in"},
+    questionFive:{question:"What is used to put a comment in Javascript?", answer1:"<!-- -->", answer2:"/* */", answer3:"//", answer4:"||", correctAnswer:"//"]
 }
 
 function quizTime() {
     generateQuizEl.setAttribute("style", "visibility: hidden;")
-    console.log(generateQuizEl.attributes)
+    var currentScore = "";
+    console.log(currentScore)
     var timer = 75;
     var setTimer = setInterval(function() {
         
         countEl.textContent = timer;
-        
+
+    function questionAndAnswers() {
         if(timer === 0){
             clearInterval(setTimer);
             generateQuizEl.setAttribute("style", "visibility: visible;")
@@ -58,7 +60,22 @@ function quizTime() {
             userInputEl.appendChild(inputBox)
 
         } else {
+            //for each  to go through the problems object and get the information out of each
+                //variable to store the question
+                //variable to store the answers
+                //variable to store the correct answer
+                //for loop to go through each object and store each piece in the correct variable, and place it on the page, creating the html
+                    //if i=0, question variable, add it put it into quizText
+                    //if 1-4, answer variable, create button, add text to button and append to quizText
+                    //if 5, correct answer variable
+                    //if eventListener on click, function 
+                    //variable to store user answer
+                    //if event.target = correct answer variable, user answer = true, create <p>, add text "correct!" and append to quizEl, add points to currentScore
+                            //else, create <p>, add text "wrong!" and append to quizEl and minus 10 seconds off timer
+                    // 
             
+        }
+        questionAndAnswers()
         }
         
         timer--;
