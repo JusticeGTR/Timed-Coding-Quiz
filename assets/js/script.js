@@ -57,6 +57,8 @@ function quizTime() {
             inputBox.setAttribute("type", "text")
             userInputEl.appendChild(inputBox)
 
+        } else {
+            
         }
         
         timer--;
